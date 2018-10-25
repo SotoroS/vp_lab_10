@@ -1,0 +1,25 @@
+﻿<Window x:Class="vp_lab_10.RenameForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:vp_lab_10"
+        mc:Ignorable="d"
+        Title="Rename Form" Height="135" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".4*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Old value:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="New value:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="tb_OldValue" Grid.Row="0" Grid.Column="1" Margin="5" IsReadOnly="True"/>
+        <TextBox x:Name="tb_NewValue" Grid.Row="1" Grid.Column="1" Margin="5"/>
+        <Button x:Name="btn_Rename" Grid.Row="2" Grid.ColumnSpan="2" Margin="5" Content="Rename" Click="btn_Rename_Click"/>
+    </Grid>
+</Window>
